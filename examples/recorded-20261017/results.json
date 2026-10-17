@@ -1,0 +1,265 @@
+{
+  "environment": {
+    "model": "Qwen2.5-7B-Instruct",
+    "gpu": "A10G",
+    "dtype": "FP16",
+    "prefill_chunk_tokens": 8,
+    "initial_tokens": 154,
+    "max_new_tokens": 64,
+    "temperature": 0,
+    "rtt_ms": 1
+  },
+  "calibration": {
+    "token_prepare_ms": 0.04519335925579071,
+    "token_restore_overhead_ms": 374.12046268582344,
+    "kv_export_overhead_ms": 42.762625962495804,
+    "kv_import_overhead_ms": 66.48624315857887
+  },
+  "summary": [
+    {
+      "name": "experiment-1-token-20",
+      "conversation_id": "conversation-2fc80ff8064149199537c0d56083cca1",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "TOKEN": 3
+      },
+      "sequence": [
+        "TOKEN",
+        "TOKEN",
+        "TOKEN"
+      ],
+      "first_ms": 376.0202396661043,
+      "total_ms": 1139.3491178750992
+    },
+    {
+      "name": "experiment-1-kv-20",
+      "conversation_id": "conversation-f20f60fd64654c80b790549f2e956627",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "KV": 3
+      },
+      "sequence": [
+        "KV",
+        "KV",
+        "KV"
+      ],
+      "first_ms": 2623.0094581842422,
+      "total_ms": 7816.049108281732
+    },
+    {
+      "name": "experiment-1-token-200",
+      "conversation_id": "conversation-8f80b1579a384326a1242eeda97f16a3",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "TOKEN": 3
+      },
+      "sequence": [
+        "TOKEN",
+        "TOKEN",
+        "TOKEN"
+      ],
+      "first_ms": 372.1612635999918,
+      "total_ms": 1132.9396665096283
+    },
+    {
+      "name": "experiment-1-kv-200",
+      "conversation_id": "conversation-4adbc43fc99c4a8a8b06eed306d17605",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "KV": 3
+      },
+      "sequence": [
+        "KV",
+        "KV",
+        "KV"
+      ],
+      "first_ms": 497.46268428862095,
+      "total_ms": 1478.4490950405598
+    },
+    {
+      "name": "experiment-1-token-10000",
+      "conversation_id": "conversation-916e2dbfd6624ddcbe350cfe6415194d",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "TOKEN": 3
+      },
+      "sequence": [
+        "TOKEN",
+        "TOKEN",
+        "TOKEN"
+      ],
+      "first_ms": 377.238966524601,
+      "total_ms": 1137.2125949710608
+    },
+    {
+      "name": "experiment-1-kv-10000",
+      "conversation_id": "conversation-710adac26f80420fa583c11db19b7bf2",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "KV": 3
+      },
+      "sequence": [
+        "KV",
+        "KV",
+        "KV"
+      ],
+      "first_ms": 125.5026888102293,
+      "total_ms": 373.4886571764946
+    },
+    {
+      "name": "experiment-2-token-webui",
+      "conversation_id": "conversation-acbe0a0648494eb2b070a0f6acef482f",
+      "messages": 9,
+      "transfers": 8,
+      "modes": {
+        "TOKEN": 8
+      },
+      "sequence": [
+        "TOKEN",
+        "TOKEN",
+        "TOKEN",
+        "TOKEN",
+        "TOKEN",
+        "TOKEN",
+        "TOKEN",
+        "TOKEN"
+      ],
+      "first_ms": 375.39378739893436,
+      "total_ms": 3117.060264572501
+    },
+    {
+      "name": "experiment-2-kv-webui",
+      "conversation_id": "conversation-1078edf4bfff48d2963fe5c02bf1d84f",
+      "messages": 9,
+      "transfers": 8,
+      "modes": {
+        "KV": 8
+      },
+      "sequence": [
+        "KV",
+        "KV",
+        "KV",
+        "KV",
+        "KV",
+        "KV",
+        "KV",
+        "KV"
+      ],
+      "first_ms": 2610.175386071205,
+      "total_ms": 10997.786033898592
+    },
+    {
+      "name": "experiment-2-adaptive-webui",
+      "conversation_id": "conversation-2fd7bd6c25734442be885ef3b01fdbe5",
+      "messages": 9,
+      "transfers": 8,
+      "modes": {
+        "TOKEN": 4,
+        "KV": 4
+      },
+      "sequence": [
+        "TOKEN",
+        "KV",
+        "KV",
+        "TOKEN",
+        "TOKEN",
+        "KV",
+        "KV",
+        "TOKEN"
+      ],
+      "first_ms": 413.8739388436079,
+      "total_ms": 2622.221875935793
+    },
+    {
+      "name": "experiment-3-kv-gap64",
+      "conversation_id": "conversation-57fed1f825104488920e2d06e678a919",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "KV": 3
+      },
+      "sequence": [
+        "KV",
+        "KV",
+        "KV"
+      ],
+      "first_ms": 496.66609056293964,
+      "total_ms": 1798.2534114271402
+    },
+    {
+      "name": "experiment-3-kv-gap128",
+      "conversation_id": "conversation-81b4c167b84d488fac4c4bed533dacfb",
+      "messages": 4,
+      "transfers": 3,
+      "modes": {
+        "KV": 3
+      },
+      "sequence": [
+        "KV",
+        "KV",
+        "KV"
+      ],
+      "first_ms": 493.71371045708656,
+      "total_ms": 2107.8056264668703
+    }
+  ],
+  "gaps": [
+    {
+      "gap": 0,
+      "payload_bytes": 5734832,
+      "p2p_ms": 379.35169599950314,
+      "receiver_import_ms": 65.91995246708393,
+      "sender_prepare_ms": 41.47022403776646,
+      "handoff_e2e_ms": 491.3054592907429
+    },
+    {
+      "gap": 64,
+      "payload_bytes": 9405104,
+      "p2p_ms": 626.1149439960718,
+      "receiver_import_ms": 105.6855134665966,
+      "sender_prepare_ms": 74.17137548327446,
+      "handoff_e2e_ms": 812.7261660993099
+    },
+    {
+      "gap": 128,
+      "payload_bytes": 13075376,
+      "p2p_ms": 866.3886245340109,
+      "receiver_import_ms": 142.72363297641277,
+      "sender_prepare_ms": 114.28240686655045,
+      "handoff_e2e_ms": 1132.4041336774826
+    }
+  ],
+  "dynamic_schedule": [
+    20,
+    10000,
+    10000,
+    20,
+    20,
+    10000,
+    10000,
+    20
+  ],
+  "adaptive_sequence": [
+    "TOKEN",
+    "KV",
+    "KV",
+    "TOKEN",
+    "TOKEN",
+    "KV",
+    "KV",
+    "TOKEN"
+  ],
+  "switches": 4,
+  "sessions": 11,
+  "transfers": 48,
+  "utterances": 59,
+  "static_texts_match": true,
+  "dynamic_texts_match": true,
+  "gap_texts_match": true
+}

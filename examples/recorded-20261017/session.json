@@ -1,0 +1,56 @@
+{
+  "agent_a_profile": {
+    "agent_id": "agent-a",
+    "display_name": "Agent A",
+    "role_description": "",
+    "system_prompt": "你是正方，支持取消调休。回应对方，用一句话提出理由。",
+    "prompt_version": "v1",
+    "local_context_provider": "static",
+    "local_context": "",
+    "generation_config": {
+      "max_new_tokens": 64,
+      "temperature": 0.0,
+      "seed": 42
+    }
+  },
+  "agent_b_profile": {
+    "agent_id": "agent-b",
+    "display_name": "Agent B",
+    "role_description": "",
+    "system_prompt": "你是反方，支持保留调休。回应对方，用一句话提出理由。",
+    "prompt_version": "v1",
+    "local_context_provider": "static",
+    "local_context": "",
+    "generation_config": {
+      "max_new_tokens": 64,
+      "temperature": 0.0,
+      "seed": 43
+    }
+  },
+  "initial_input": "\n辩题：是否应取消周末补班拼长假的调休制度？请双方交替发言，每次只说一个理由，控制在30字以内。",
+  "first_speaker": "agent-a",
+  "max_agent_turns": 9,
+  "max_context_tokens": 8192,
+  "stop_on_eos": false,
+  "mode_policy": "adaptive",
+  "decision": {
+    "objective": "mode_e2e",
+    "paper": {
+      "layers": 32,
+      "heads": 32,
+      "head_dim": 128,
+      "model_dim": 4096,
+      "ff_dim": 11008,
+      "vocab_size": 32000,
+      "receiver_flops": 1000000000000.0,
+      "token_bits": 32,
+      "kv_precision_bits": 16,
+      "compression_ratio": 1.0
+    },
+    "token_prepare_ms": 0.04519335925579071,
+    "token_restore_overhead_ms": 374.12046268582344,
+    "kv_export_overhead_ms": 42.762625962495804,
+    "kv_import_overhead_ms": 66.48624315857887,
+    "history_window_tokens": 4096
+  }
+}

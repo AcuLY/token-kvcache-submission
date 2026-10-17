@@ -1,6 +1,6 @@
 # Token/KV Cache 通信实验台
 
-[▶ 在线播放实验演示（10 分 26 秒）](https://aculy.github.io/token-kvcache-submission/) · [下载视频](https://raw.githubusercontent.com/AcuLY/token-kvcache-submission/main/videos/demo.mp4)
+[▶ 在线播放实验演示（7 分 10 秒）](https://aculy.github.io/token-kvcache-submission/) · [下载视频](https://raw.githubusercontent.com/AcuLY/token-kvcache-submission/main/videos/demo.mp4)
 
 视频包含静态带宽对照、动态策略选择、缓存驱逐与恢复三个实验，配有中文旁白和画内字幕。
 
