@@ -1,0 +1,6 @@
+# Optional environment for MODEL_BACKEND=huggingface (server or local GPU).
+# Keep it separate from the Mock/CPU environment; adjust the torch index and
+# version to the server's CUDA runtime before installing.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0+cu128
+transformers==4.57.6

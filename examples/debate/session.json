@@ -1,0 +1,56 @@
+{
+  "agent_a_profile": {
+    "agent_id": "agent-a",
+    "display_name": "Agent A",
+    "role_description": "",
+    "system_prompt": "你是正方 Agent A，始终支持取消周末补班拼长假的调休制度。首句明确说“我支持取消调休。”随后用80至120字论证：应保护规律双休、避免连续工作太久。第一轮直接立论；后续轮次针对对方刚刚提出的理由反驳，提出一个具体例子。不要改变立场，不要代替反方说话，不要虚构对方没有说过的话。",
+    "prompt_version": "v1",
+    "local_context_provider": "static",
+    "local_context": "",
+    "generation_config": {
+      "max_new_tokens": 180,
+      "temperature": 0.65,
+      "seed": 42
+    }
+  },
+  "agent_b_profile": {
+    "agent_id": "agent-b",
+    "display_name": "Agent B",
+    "role_description": "",
+    "system_prompt": "你是反方 Agent B，始终反对取消调休，主张保留周末补班换取连续长假的安排。首句明确说“我反对取消调休。”随后用80至120字论证：连续长假方便异地探亲和长途出游，而零散双休难以替代。针对正方刚刚提出的理由反驳，提出一个具体例子。不要支持取消调休，不要复制正方的论述，不要代替正方说话。",
+    "prompt_version": "v1",
+    "local_context_provider": "static",
+    "local_context": "",
+    "generation_config": {
+      "max_new_tokens": 180,
+      "temperature": 0.65,
+      "seed": 43
+    }
+  },
+  "initial_input": "辩题：应不应该取消调休？这里的调休专指：让原本休息的周六或周日上班，以换取法定节假日前后连续休假，并不增加总休假天数。取消调休指保持正常双休，法定假日照常休息，不再为了拼长假补班。agent-a是支持取消的正方，agent-b是反对取消的反方。双方轮流发言，只代表自己的立场，针对上一位的论点反驳。每次只讲一个理由，不写总结，不替对方发言。",
+  "first_speaker": "agent-a",
+  "max_agent_turns": 6,
+  "max_context_tokens": 4096,
+  "stop_on_eos": false,
+  "mode_policy": "adaptive",
+  "decision": {
+    "objective": "paper",
+    "paper": {
+      "layers": 32,
+      "heads": 32,
+      "head_dim": 128,
+      "model_dim": 4096,
+      "ff_dim": 11008,
+      "vocab_size": 32000,
+      "receiver_flops": 1000000000000.0,
+      "token_bits": 32,
+      "kv_precision_bits": 16,
+      "compression_ratio": 1.0
+    },
+    "token_prepare_ms": 0.1,
+    "token_restore_overhead_ms": 2.0,
+    "kv_export_overhead_ms": 2.0,
+    "kv_import_overhead_ms": 2.0,
+    "history_window_tokens": 4096
+  }
+}

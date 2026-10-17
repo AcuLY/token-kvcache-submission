@@ -1,0 +1,89 @@
+name: token-kvcache
+
+services:
+  coordinator:
+    build:
+      context: .
+      target: coordinator
+    environment:
+      FRONTEND_DIST: /app/frontend/dist
+      HEARTBEAT_TIMEOUT_SECONDS: "6"
+      EVENT_RETENTION: "10000"
+      MODEL_SERVICE_URL: http://model-service:8100
+    ports:
+      - "${COORDINATOR_HOST_PORT:-8080}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+
+  model-service:
+    build:
+      context: .
+      target: model-service
+    ports:
+      - "8100:8100"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8100/health')"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+
+  agent-a:
+    build:
+      context: .
+      target: agent
+    environment:
+      AGENT_ID: agent-a
+      AGENT_DISPLAY_NAME: Agent A
+      COORDINATOR_URL: http://coordinator:8000
+      MODEL_SERVICE_URL: http://model-service:8100
+      CONTROL_ADVERTISE_URL: http://agent-a:8000
+      DATA_BIND_HOST: 0.0.0.0
+      DATA_BIND_PORT: "9100"
+      DATA_ADVERTISE_HOST: agent-a
+      DATA_ADVERTISE_PORT: "9100"
+      HEARTBEAT_INTERVAL_SECONDS: "2"
+    ports:
+      - "8201:8000"
+      - "9101:9100"
+    depends_on:
+      coordinator:
+        condition: service_healthy
+      model-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+
+  agent-b:
+    build:
+      context: .
+      target: agent
+    environment:
+      AGENT_ID: agent-b
+      AGENT_DISPLAY_NAME: Agent B
+      COORDINATOR_URL: http://coordinator:8000
+      MODEL_SERVICE_URL: http://model-service:8100
+      CONTROL_ADVERTISE_URL: http://agent-b:8000
+      DATA_BIND_HOST: 0.0.0.0
+      DATA_BIND_PORT: "9100"
+      DATA_ADVERTISE_HOST: agent-b
+      DATA_ADVERTISE_PORT: "9100"
+      HEARTBEAT_INTERVAL_SECONDS: "2"
+    ports:
+      - "8202:8000"
+      - "9102:9100"
+    depends_on:
+      coordinator:
+        condition: service_healthy
+      model-service:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 2s
+      timeout: 2s
+      retries: 20

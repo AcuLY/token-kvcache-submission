@@ -1,0 +1,4 @@
+# Optional NVIDIA CUDA environment; keep separate from the Mock/CPU environment.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.8.0+cu128
+transformers==4.57.6

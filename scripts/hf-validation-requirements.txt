@@ -1,0 +1,4 @@
+# Optional CPU-only validation environment; not required by the four-service Mock deployment.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.0+cpu
+transformers==4.57.6

@@ -1,0 +1,575 @@
+{
+  "created_utc": "2026-10-17T08:34:51.421571+00:00",
+  "source": "current working tree, including selected uncommitted and untracked files",
+  "base_commit": "a2dce796802f900df7bc1affb66a29f1e31152ca",
+  "dirty": true,
+  "file_count": 139,
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 198
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 287
+    },
+    {
+      "path": ".python-version",
+      "bytes": 5
+    },
+    {
+      "path": "agent_peer/__init__.py",
+      "bytes": 140
+    },
+    {
+      "path": "agent_peer/__main__.py",
+      "bytes": 363
+    },
+    {
+      "path": "agent_peer/app.py",
+      "bytes": 2853
+    },
+    {
+      "path": "agent_peer/config.py",
+      "bytes": 1650
+    },
+    {
+      "path": "agent_peer/coordinator_client.py",
+      "bytes": 2784
+    },
+    {
+      "path": "agent_peer/handlers.py",
+      "bytes": 8023
+    },
+    {
+      "path": "agent_peer/model_client.py",
+      "bytes": 4395
+    },
+    {
+      "path": "agent_peer/network.py",
+      "bytes": 2073
+    },
+    {
+      "path": "agent_peer/runtime.py",
+      "bytes": 35175
+    },
+    {
+      "path": "agent_peer/transport.py",
+      "bytes": 5570
+    },
+    {
+      "path": "compose.yaml",
+      "bytes": 2444
+    },
+    {
+      "path": "coordinator/__init__.py",
+      "bytes": 192
+    },
+    {
+      "path": "coordinator/__main__.py",
+      "bytes": 371
+    },
+    {
+      "path": "coordinator/app.py",
+      "bytes": 16267
+    },
+    {
+      "path": "coordinator/control.py",
+      "bytes": 2362
+    },
+    {
+      "path": "coordinator/decision.py",
+      "bytes": 5289
+    },
+    {
+      "path": "coordinator/errors.py",
+      "bytes": 854
+    },
+    {
+      "path": "coordinator/journal.py",
+      "bytes": 4238
+    },
+    {
+      "path": "coordinator/model_connection.py",
+      "bytes": 7513
+    },
+    {
+      "path": "coordinator/planning.py",
+      "bytes": 3279
+    },
+    {
+      "path": "coordinator/providers.py",
+      "bytes": 4713
+    },
+    {
+      "path": "coordinator/registry.py",
+      "bytes": 4988
+    },
+    {
+      "path": "coordinator/schemas.py",
+      "bytes": 10928
+    },
+    {
+      "path": "coordinator/service.py",
+      "bytes": 61832
+    },
+    {
+      "path": "coordinator/ssh_proxy.py",
+      "bytes": 1034
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 927
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1166
+    },
+    {
+      "path": "docs/real-model-service.md",
+      "bytes": 6622
+    },
+    {
+      "path": "docs/reproduce.md",
+      "bytes": 5954
+    },
+    {
+      "path": "docs/shared-context-v2.md",
+      "bytes": 5810
+    },
+    {
+      "path": "examples/debate/network.json",
+      "bytes": 534
+    },
+    {
+      "path": "examples/debate/README.md",
+      "bytes": 673
+    },
+    {
+      "path": "examples/debate/session.json",
+      "bytes": 2685
+    },
+    {
+      "path": "examples/debate/turn-template.txt",
+      "bytes": 332
+    },
+    {
+      "path": "frontend/.gitignore",
+      "bytes": 77
+    },
+    {
+      "path": "frontend/e2e/app.spec.ts",
+      "bytes": 8285
+    },
+    {
+      "path": "frontend/e2e/live.spec.ts",
+      "bytes": 11574
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "bytes": 551
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 441
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 1134
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "bytes": 716
+    },
+    {
+      "path": "frontend/playwright.live.config.ts",
+      "bytes": 454
+    },
+    {
+      "path": "frontend/pnpm-lock.yaml",
+      "bytes": 97944
+    },
+    {
+      "path": "frontend/src/api/http.ts",
+      "bytes": 5453
+    },
+    {
+      "path": "frontend/src/App.vue",
+      "bytes": 2102
+    },
+    {
+      "path": "frontend/src/charts/setup.ts",
+      "bytes": 459
+    },
+    {
+      "path": "frontend/src/components/AgentRegistrationCard.vue",
+      "bytes": 5439
+    },
+    {
+      "path": "frontend/src/components/AppShell.vue",
+      "bytes": 9869
+    },
+    {
+      "path": "frontend/src/components/BrandMark.vue",
+      "bytes": 794
+    },
+    {
+      "path": "frontend/src/components/ConversationPanel.vue",
+      "bytes": 8250
+    },
+    {
+      "path": "frontend/src/components/CurrentHandoffPanel.vue",
+      "bytes": 6572
+    },
+    {
+      "path": "frontend/src/components/EmptyState.vue",
+      "bytes": 1275
+    },
+    {
+      "path": "frontend/src/components/MockNetworkPreviewChart.vue",
+      "bytes": 2214
+    },
+    {
+      "path": "frontend/src/components/ModelConnectionPanel.vue",
+      "bytes": 7042
+    },
+    {
+      "path": "frontend/src/components/NetworkChart.vue",
+      "bytes": 3886
+    },
+    {
+      "path": "frontend/src/components/ObservationEventList.vue",
+      "bytes": 2396
+    },
+    {
+      "path": "frontend/src/components/PhaseTimingChart.vue",
+      "bytes": 2610
+    },
+    {
+      "path": "frontend/src/components/ProfileEditor.vue",
+      "bytes": 4311
+    },
+    {
+      "path": "frontend/src/components/SessionSidebar.vue",
+      "bytes": 7541
+    },
+    {
+      "path": "frontend/src/components/StatusDot.vue",
+      "bytes": 971
+    },
+    {
+      "path": "frontend/src/components/TransferDurationChart.vue",
+      "bytes": 2133
+    },
+    {
+      "path": "frontend/src/env.d.ts",
+      "bytes": 196
+    },
+    {
+      "path": "frontend/src/main.ts",
+      "bytes": 249
+    },
+    {
+      "path": "frontend/src/realtime/ws.ts",
+      "bytes": 2775
+    },
+    {
+      "path": "frontend/src/router/index.ts",
+      "bytes": 2513
+    },
+    {
+      "path": "frontend/src/stores/app.ts",
+      "bytes": 19289
+    },
+    {
+      "path": "frontend/src/styles/global.css",
+      "bytes": 2398
+    },
+    {
+      "path": "frontend/src/styles/tokens.css",
+      "bytes": 861
+    },
+    {
+      "path": "frontend/src/types/contracts.ts",
+      "bytes": 8659
+    },
+    {
+      "path": "frontend/src/types/modelConnection.ts",
+      "bytes": 694
+    },
+    {
+      "path": "frontend/src/types/normalizers.ts",
+      "bytes": 13903
+    },
+    {
+      "path": "frontend/src/utils/format.ts",
+      "bytes": 2859
+    },
+    {
+      "path": "frontend/src/utils/prompts.ts",
+      "bytes": 904
+    },
+    {
+      "path": "frontend/src/views/AgentConfigView.vue",
+      "bytes": 16070
+    },
+    {
+      "path": "frontend/src/views/ConversationView.vue",
+      "bytes": 16646
+    },
+    {
+      "path": "frontend/src/views/EnvironmentView.vue",
+      "bytes": 16196
+    },
+    {
+      "path": "frontend/src/views/ExperimentView.vue",
+      "bytes": 23318
+    },
+    {
+      "path": "frontend/src/views/ExtensionUnavailableView.vue",
+      "bytes": 640
+    },
+    {
+      "path": "frontend/src/views/MockLabView.vue",
+      "bytes": 18109
+    },
+    {
+      "path": "frontend/src/views/NotFoundView.vue",
+      "bytes": 549
+    },
+    {
+      "path": "frontend/tests/app-store.spec.ts",
+      "bytes": 3740
+    },
+    {
+      "path": "frontend/tests/conversation-transfer.spec.ts",
+      "bytes": 1559
+    },
+    {
+      "path": "frontend/tests/empty-state.spec.ts",
+      "bytes": 645
+    },
+    {
+      "path": "frontend/tests/normalizers.spec.ts",
+      "bytes": 4227
+    },
+    {
+      "path": "frontend/tests/prompts.spec.ts",
+      "bytes": 924
+    },
+    {
+      "path": "frontend/tests/setup.ts",
+      "bytes": 476
+    },
+    {
+      "path": "frontend/tests/transfer-review.spec.ts",
+      "bytes": 2008
+    },
+    {
+      "path": "frontend/tsconfig.app.json",
+      "bytes": 542
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "bytes": 119
+    },
+    {
+      "path": "frontend/tsconfig.node.json",
+      "bytes": 433
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "bytes": 633
+    },
+    {
+      "path": "frontend/vitest.config.ts",
+      "bytes": 411
+    },
+    {
+      "path": "model_service/__init__.py",
+      "bytes": 185
+    },
+    {
+      "path": "model_service/__main__.py",
+      "bytes": 485
+    },
+    {
+      "path": "model_service/app.py",
+      "bytes": 6786
+    },
+    {
+      "path": "model_service/factory.py",
+      "bytes": 1498
+    },
+    {
+      "path": "model_service/hf_runtime.py",
+      "bytes": 50804
+    },
+    {
+      "path": "model_service/runtime.py",
+      "bytes": 29114
+    },
+    {
+      "path": "model_service/tokenizer.py",
+      "bytes": 3112
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1103
+    },
+    {
+      "path": "README.md",
+      "bytes": 14056
+    },
+    {
+      "path": "scripts/gpu-validation-requirements.txt",
+      "bytes": 178
+    },
+    {
+      "path": "scripts/gpu_adaptive.py",
+      "bytes": 4139
+    },
+    {
+      "path": "scripts/hf-model-service-requirements.txt",
+      "bytes": 308
+    },
+    {
+      "path": "scripts/hf-validation-requirements.txt",
+      "bytes": 188
+    },
+    {
+      "path": "scripts/model_service_remote.py",
+      "bytes": 10267
+    },
+    {
+      "path": "scripts/package_submission.py",
+      "bytes": 4924
+    },
+    {
+      "path": "scripts/provision_server_env.sh",
+      "bytes": 3971
+    },
+    {
+      "path": "scripts/run_local.py",
+      "bytes": 4968
+    },
+    {
+      "path": "scripts/run_local_model.ps1",
+      "bytes": 864
+    },
+    {
+      "path": "scripts/sync_to_server.py",
+      "bytes": 8450
+    },
+    {
+      "path": "scripts/validate_gpu_model.py",
+      "bytes": 28612
+    },
+    {
+      "path": "scripts/validate_hf_cache.py",
+      "bytes": 4293
+    },
+    {
+      "path": "scripts/validate_server_model.py",
+      "bytes": 11335
+    },
+    {
+      "path": "shared/__init__.py",
+      "bytes": 902
+    },
+    {
+      "path": "shared/codec.py",
+      "bytes": 4827
+    },
+    {
+      "path": "shared/contracts.py",
+      "bytes": 29189
+    },
+    {
+      "path": "shared/interfaces.py",
+      "bytes": 3449
+    },
+    {
+      "path": "shared/kv.py",
+      "bytes": 2952
+    },
+    {
+      "path": "shared/models.py",
+      "bytes": 108
+    },
+    {
+      "path": "shared/prompt.py",
+      "bytes": 965
+    },
+    {
+      "path": "tests/integration/test_live_stack.py",
+      "bytes": 12409
+    },
+    {
+      "path": "tests/unit/test_agent_peer.py",
+      "bytes": 21050
+    },
+    {
+      "path": "tests/unit/test_coordinator.py",
+      "bytes": 24921
+    },
+    {
+      "path": "tests/unit/test_decision.py",
+      "bytes": 3965
+    },
+    {
+      "path": "tests/unit/test_extensions.py",
+      "bytes": 3855
+    },
+    {
+      "path": "tests/unit/test_gpu_adaptive.py",
+      "bytes": 3056
+    },
+    {
+      "path": "tests/unit/test_hf_runtime.py",
+      "bytes": 16792
+    },
+    {
+      "path": "tests/unit/test_kv.py",
+      "bytes": 7688
+    },
+    {
+      "path": "tests/unit/test_kv_wire.py",
+      "bytes": 7610
+    },
+    {
+      "path": "tests/unit/test_model_connection.py",
+      "bytes": 6979
+    },
+    {
+      "path": "tests/unit/test_model_factory.py",
+      "bytes": 1277
+    },
+    {
+      "path": "tests/unit/test_model_service.py",
+      "bytes": 6660
+    },
+    {
+      "path": "tests/unit/test_remote_model_service.py",
+      "bytes": 2779
+    },
+    {
+      "path": "tests/unit/test_shared_context.py",
+      "bytes": 8852
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 100373
+    }
+  ],
+  "excluded": [
+    "credentials and .env",
+    "model weights",
+    "virtual environments",
+    "dependency and build caches",
+    "raw connection exports",
+    "author chat images",
+    "design drafts and historical status documents",
+    "experiment results and report materials"
+  ]
+}
